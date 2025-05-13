@@ -30,7 +30,7 @@ import tensorflow.compat.v1 as tf
 
 tf.disable_v2_behavior()
 
-env = gym.make("MsPacman-v0")
+env = gym.make("MsPacman-v0", render_mode="human")
 done = True  # env needs to be reset
 
 # First let's build the two DQNs (online & target)
@@ -159,6 +159,28 @@ with tf.Session() as sess:
     else:
         init.run()
         copy_online_to_target.run()
+        
+    if args.test:
+        obs = env.reset()
+        for skip in range(skip_start):
+            obs, reward, terminated, truncated, info = env.step(0)
+
+        state = preprocess_observation(obs)
+        done = False
+
+        while not done:
+            if args.render:
+                env.render()
+            q_values = online_q_values.eval(feed_dict={X_state: [state]})
+            action = np.argmax(q_values)
+            obs, reward, terminated, truncated, info = env.step(action)
+            done = terminated or truncated
+            state = preprocess_observation(obs)
+
+        input("테스트 플레이 종료. 창을 닫으려면 Enter 키를 누르세요.")
+        env.close()
+        exit()
+
     while True:
         step = global_step.eval()
         if step >= args.number_steps:
