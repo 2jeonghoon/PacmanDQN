@@ -1,1 +1,27 @@
 # PacmanDQN
+
+Installation
+----
+```shell
+conda create --name dqn python=3.7
+pip install --user --upgrade pip
+pip install --user --upgrade -r requirements.txt
+pip install requests
+pip install gym[atari,accept-rom-license]
+pip install autorom
+AutoROM --accept-license
+```
+
+Run
+----
+To train the model:
+```shell
+python tiny_dqn.py -v --number-steps 1000000
+```
+
+The model is saved to my_dqn.ckpt by default. To view it in action, run:
+```shell
+python tiny_dqn.py --test --render
+```
+
+https://github.com/ageron/tiny-dqn
