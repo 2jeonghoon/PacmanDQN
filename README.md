@@ -2,6 +2,15 @@
 
 Installation
 ----
+Install Miniconda ([https://www.anaconda.com/docs/getting-started/miniconda/main](https://www.anaconda.com/docs/getting-started/miniconda/install))
+- Open Windows PowerShell as Administrator
+
+```shell
+wget "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe" -outfile ".\miniconda.exe"
+Start-Process -FilePath ".\miniconda.exe" -ArgumentList "/S" -Wait
+del .\miniconda.exe
+```
+
 ```shell
 conda create --name dqn python=3.7
 pip install --user --upgrade pip
