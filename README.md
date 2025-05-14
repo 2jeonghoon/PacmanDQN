@@ -15,7 +15,7 @@ del .\miniconda.exe
 ```shell
 conda create --name dqn python=3.7
 conda activate dqn
-python pip install --user --upgrade pip
+pip install --user --upgrade pip
 pip install --user --upgrade -r requirements.txt
 pip install requests
 pip install gym[atari,accept-rom-license]
