@@ -25,8 +25,9 @@ Run
 ----
 To train the model:
 ```shell
-python tiny_dqn.py -v --number-steps 1000000
+python tiny_dqn.py -v --number-steps [number of steps]
 ```
+ recommended number of steps is 1000000
 
 The model is saved to my_dqn.ckpt by default. To view it in action, run:
 ```shell
