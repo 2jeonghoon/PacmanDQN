@@ -1,6 +1,6 @@
 # PacmanDQN
 
-Installation
+Installation in Windows
 ----
 Install Miniconda ([https://www.anaconda.com/docs/getting-started/miniconda/main](https://www.anaconda.com/docs/getting-started/miniconda/install))
 - Open Windows PowerShell as Administrator
@@ -21,7 +21,7 @@ pip install --user --upgrade -r requirements.txt
 AutoROM --accept-license
 ```
 
-Run
+Run in Windows
 ----
 To train the model:
 ```shell
