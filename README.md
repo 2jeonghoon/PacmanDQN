@@ -18,9 +18,6 @@ conda create --name dqn python=3.7
 conda activate dqn
 cd PacmanDQN
 pip install --user --upgrade -r requirements.txt
-pip install requests
-pip install gym[atari,accept-rom-license]
-pip install autorom
 AutoROM --accept-license
 ```
 
