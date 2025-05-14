@@ -8,3 +8,5 @@ atari-py
 Pillow
 PyOpenGL
 request
+gym[atari,accept-rom-license]
+autorom
