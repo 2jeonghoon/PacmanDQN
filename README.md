@@ -11,6 +11,7 @@ Start-Process -FilePath ".\miniconda.exe" -ArgumentList "/S" -Wait
 del .\miniconda.exe
 ```
 
+- Run the following command in the Anaconda prompt:
 ```shell
 conda create --name dqn python=3.7
 pip install --user --upgrade pip
