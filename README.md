@@ -13,6 +13,7 @@ del .\miniconda.exe
 
 - Run the following command in the Anaconda prompt:
 ```shell
+git clone https://github.com/2jeonghoon/PacmanDQN.git
 conda create --name dqn python=3.7
 conda activate dqn
 cd PacmanDQN
